@@ -22,7 +22,7 @@ const modalVariants = {
     transition: { delay: 0.5 },
   },
 };
-const Modal = ({ showModal }) => {
+const Modal = ({ showModal, setShowModal }) => {
   return (
     <AnimatePresence exitBeforeEnter>
       {showModal && (
@@ -36,7 +36,7 @@ const Modal = ({ showModal }) => {
           <motion.div className="modal" variants={modalVariants}>
             <p>Want to make another pizza?</p>
             <Link to="/">
-              <button>Start Again</button>
+              <button >Start Again</button>
             </Link>
           </motion.div>
         </motion.div>
